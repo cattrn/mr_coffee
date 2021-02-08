@@ -1,0 +1,262 @@
+/* SELF-HOSTED FONTS */
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("/fonts/AvenirNext-Medium.woff") format("woff"),
+    url("/fonts/AvenirNext-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("/fonts/AvenirNext-Bold.woff") format("woff"),
+    url("/fonts/AvenirNext-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* GLOBAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* TYPOGRAPHY */
+
+p {
+  color: #5c5b5b;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 20px 0;
+}
+
+p.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+p.no-margin-bottom + p {
+  margin-top: 0;
+}
+
+h1 {
+  color: #5c5b5b;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 1.4em;
+  padding: 50px 0;
+  text-transform: uppercase;
+  text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #5c5b5b;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 1.4em;
+  padding: 50px 0;
+}
+
+h3 {
+  color: #5c5b5b;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 33px;
+  font-weight: normal;
+  line-height: 1.4em;
+  padding: 50px 0 0;
+}
+
+h4 {
+  color: #5c5b5b;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 18px;
+  line-height: 1.4em;
+  padding: 0;
+  text-shadow: -1px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+h5 {
+  color: #5c5b5b;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4em;
+  padding: 50px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #6a7b8b;
+}
+
+button,
+button[type="submit"] {
+  background-color: #6a7b8b;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 50px;
+}
+
+button[type="submit"],
+button[type="button"] {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+label {
+  color: #5c5b5b;
+  display: block;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 20px;
+}
+
+form input:not(button[type="submit"]),
+form textarea {
+  background-color: #bbc2c9;
+  border: none;
+  color: #fff;
+  display: block;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 10px 0 20px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+form textarea::placeholder {
+  color: #fff;
+}
+
+form .required {
+  color: #697a8b;
+}
+
+form input:not(button[type="submit"]).invalid,
+form textarea.invalid {
+  border-color: maroon;
+  border-style: solid;
+}
+
+.white-text,
+.white-text * {
+  color: #fff;
+}
+
+.center,
+.center * {
+  text-align: center;
+}
+
+.emphasis {
+  font-size: 1.5em;
+}
+
+/* SPACING & LAYOUT */
+
+main {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto 60px;
+}
+
+img.center,
+.center img,
+input.center,
+button.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.small-width {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.xsmall-width {
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.columns > img:first-child {
+  margin-top: 20px;
+}
+
+.columns h3:first-child {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 769px) {
+  .columns {
+    display: flex;
+    margin: 10px 0 40px;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .columns > *:not(:last-child),
+  .reverse > *:not(:first-child) {
+    margin-right: 5%;
+  }
+
+  .reverse > *:first-child {
+    margin-right: 0;
+  }
+
+  .columns-equal3 > * {
+    width: 30%;
+  }
+
+  .columns-third > :first-child {
+    width: 40%;
+  }
+
+  .columns-third div:nth-child(2) {
+    width: 50%;
+  }
+
+  .columns > img {
+    object-fit: cover;
+  }
+
+  .columns > img:first-child {
+  margin-top: 0;
+  }
+
+  .columns-third:nth-child(2) > div {
+    margin-top: 30px;
+  }
+}
+
+.map {
+  margin: 40px 0 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bababa;
+  width: 100%;
+}
+
+.full-width-button {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,56 @@
+/* HOMEPAGE STYLING */
+
+.logo-and-hero .hero-image {
+  background-image: url("/assets/mr-coffee-salle.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 689px;
+  padding: 20px;
+}
+
+.info-cards .card {
+  background-color: #bbc2c9;
+  padding: 40px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+.info-cards .card * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.info-cards .card p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 769px) {
+  .info-cards .card p {
+    font-size: 14px;
+  }
+}
+
+.program-title {
+  margin: 20px 0;
+}
+
+.program-title * {
+  display: inline;
+  padding: 0 10px 0;
+}
+
+.program-title h5 {
+  position: relative;
+  top: -12px;
+}
+
+.program-info div {
+  padding: 40px;
+}
+
+.program-info div p:nth-child(2) {
+  margin: 0 0 40px;
+}
